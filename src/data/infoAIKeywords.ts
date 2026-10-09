@@ -1,5 +1,5 @@
 // Extensive semantic keyword mapping dictionary with fuzzy typo tolerance
-// Mapping intents accurately to Monika's verified profile data
+// Mapping intents accurately to Mounika's verified profile data
 
 export type IntentType =
   | 'greeting'

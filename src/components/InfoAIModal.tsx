@@ -191,12 +191,12 @@ export const RobotAvatar: React.FC<{ className?: string }> = ({ className = 'w-1
   </svg>
 );
 
-// High-fidelity profile portrait of Monika
-export const MonikaPortrait: React.FC<{ className?: string }> = ({ className = 'w-14 h-14' }) => (
+// High-fidelity profile portrait of Mounika
+export const MounikaPortrait: React.FC<{ className?: string }> = ({ className = 'w-14 h-14' }) => (
   <div className={`rounded-full overflow-hidden bg-neutral-100 ring-2 ring-neutral-200/90 shadow-sm flex items-center justify-center shrink-0 ${className}`}>
     <img
       src="/mono.jpeg"
-      alt="Ainamilli Monika"
+      alt="Ainamilli Mounika"
       className="w-full h-full object-cover object-[center_22%]"
     />
   </div>
@@ -239,7 +239,7 @@ export const InfoAIModal: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'assistant',
-      text: "Hi! I’m Monika’s personal AI assistant. How can I help you today?",
+      text: "Hi! I’m Mounika’s personal AI assistant. How can I help you today?",
     },
   ]);
   const [isTyping, setIsTyping] = useState<boolean>(false);
@@ -260,69 +260,69 @@ export const InfoAIModal: React.FC = () => {
       // 1. GREETINGS: Respond naturally without default profile info dump
       case 'greeting':
         return {
-          text: "Hi! I’m Monika’s personal AI assistant. How can I help you today?",
+          text: "Hi! I’m Mounika’s personal AI assistant. How can I help you today?",
         };
 
       // 2A. SPECIFIC EMAIL ALONE: Display only the Email icon with clickable email link
       case 'contact_email_only':
         return {
-          text: "Here is Monika's email address. Click the icon below to write directly:",
+          text: "Here is Mounika's email address. Click the icon below to write directly:",
           cardType: 'contact_email_only',
         };
 
       // 2B. SPECIFIC LINKEDIN ALONE: Display only the LinkedIn icon with clickable profile link
       case 'contact_linkedin_only':
         return {
-          text: "Here is Monika's LinkedIn profile. Click the icon below to connect:",
+          text: "Here is Mounika's LinkedIn profile. Click the icon below to connect:",
           cardType: 'contact_linkedin_only',
         };
 
       // 2C. SPECIFIC GITHUB ALONE: Display only the GitHub icon with clickable profile link
       case 'contact_github_only':
         return {
-          text: "Here is Monika's GitHub profile. Click the icon below to explore her repositories:",
+          text: "Here is Mounika's GitHub profile. Click the icon below to explore her repositories:",
           cardType: 'contact_github_only',
         };
 
       // 2D. GENERAL CONTACT DETAILS: Show contact card with profile photo and 3 clickable icons (LinkedIn, Email, GitHub)
       case 'contact_all':
         return {
-          text: "Here are Monika's contact details. Click any icon below to connect:",
+          text: "Here are Mounika's contact details. Click any icon below to connect:",
           cardType: 'contact_all',
         };
 
       // 3. GRADUATION & EDUCATION: Most recent and relevant educational details (VIT Chennai)
       case 'graduation':
         return {
-          text: "Monika has completed her Integrated M.Tech in Software Engineering from VIT Chennai (August 2021 – May 2026).",
+          text: "Mounika has completed her Integrated M.Tech in Software Engineering from VIT Chennai (August 2021 – May 2026).",
           cardType: 'graduation',
         };
 
       // 3B. FULL EDUCATION HISTORY (If specifically asked for all/schooling)
       case 'education_full':
         return {
-          text: "Here is Monika's complete academic background:",
+          text: "Here is Mounika's complete academic background:",
           cardType: 'education_full',
         };
 
       // 4. CURRENT ROLE & STATUS: Explain only current job title, company, and responsibilities (No past internships)
       case 'current_role':
         return {
-          text: "Monika currently works as an Assistant Professor in DBMS & MySQL at Six Phrase Edutech (VSB Engineering College, Coimbatore).",
+          text: "Mounika currently works as an Assistant Professor in DBMS & MySQL at Six Phrase Edutech (VSB Engineering College, Coimbatore).",
           cardType: 'current_role',
         };
 
       // 5. PREVIOUS WORK EXPERIENCE: Only when asked about past work / internships
       case 'experience':
         return {
-          text: "Here is Monika's previous professional and internship experience:",
+          text: "Here is Mounika's previous professional and internship experience:",
           cardType: 'experience',
         };
 
       // 6A. LATEST PROJECTS (ALL)
       case 'projects_all':
         return {
-          text: "Here are Monika's latest engineering and AI projects:",
+          text: "Here are Mounika's latest engineering and AI projects:",
           cardType: 'projects_all',
         };
 
@@ -354,35 +354,35 @@ export const InfoAIModal: React.FC = () => {
       // 7. SKILLS
       case 'skills':
         return {
-          text: "Here is Monika's core technical skillset:",
+          text: "Here is Mounika's core technical skillset:",
           cardType: 'skills',
         };
 
       // 8. CERTIFICATIONS
       case 'certifications':
         return {
-          text: "Here are Monika's certifications and technical appointments:",
+          text: "Here are Mounika's certifications and technical appointments:",
           cardType: 'certifications',
         };
 
       // 9. LOCATION
       case 'location':
         return {
-          text: "Monika is currently based in Coimbatore, Tamil Nadu, India.",
+          text: "Mounika is currently based in Coimbatore, Tamil Nadu, India.",
           cardType: 'location',
         };
 
       // 10. GENERAL ABOUT (Only when explicitly asked about her bio / who is she)
       case 'about':
         return {
-          text: "Monika is a Software Engineer specializing in AI & Intelligent Automation Systems. She completed her Integrated M.Tech in Software Engineering at VIT Chennai and is currently working as an Assistant Professor in DBMS & MySQL at Six Phrase Edutech.",
+          text: "Mounika is a Software Engineer specializing in AI & Intelligent Automation Systems. She completed her Integrated M.Tech in Software Engineering at VIT Chennai and is currently working as an Assistant Professor in DBMS & MySQL at Six Phrase Edutech.",
         };
 
       // 11. UNKNOWN / UNMATCHED INPUT
       case 'unknown':
       default:
         return {
-          text: "I didn't quite catch that. You can ask me specifically about Monika's graduation, current role, latest projects, or contact channels!",
+          text: "I didn't quite catch that. You can ask me specifically about Mounika's graduation, current role, latest projects, or contact channels!",
         };
     }
   };
@@ -414,7 +414,7 @@ export const InfoAIModal: React.FC = () => {
     'What is she doing currently?',
     'Where did she graduate from?',
     'What are her latest projects?',
-    'How to contact Monika?',
+    'How to contact Mounika?',
   ];
 
   return (
@@ -458,7 +458,7 @@ export const InfoAIModal: React.FC = () => {
                       Online
                     </span>
                   </div>
-                  <div className="text-[11px] text-neutral-500">Monika's Personal Assistant</div>
+                  <div className="text-[11px] text-neutral-500">Mounika's Personal Assistant</div>
                 </div>
               </div>
 
@@ -520,9 +520,9 @@ export const InfoAIModal: React.FC = () => {
                       {m.cardType === 'contact_all' && (
                         <div className="mt-3 pt-3 border-t border-neutral-200/80 bg-white rounded-xl p-3 border border-neutral-200/70 shadow-2xs">
                           <div className="flex items-center gap-3">
-                            <MonikaPortrait className="w-12 h-12" />
+                            <MounikaPortrait className="w-12 h-12" />
                             <div>
-                              <h4 className="text-xs font-bold text-neutral-900">Ainamilli Monika</h4>
+                              <h4 className="text-xs font-bold text-neutral-900">Ainamilli Mounika</h4>
                               <p className="text-[11px] text-neutral-500">Software Engineer · AI & Systems</p>
                             </div>
                           </div>
